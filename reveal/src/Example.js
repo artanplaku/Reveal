@@ -306,6 +306,7 @@ return(
               Add to cart
               
             </button>
+            
             <a
               className="bg-purple-600 rounded-full py-2 px-4 my-2 text-sm text-white hover:bg-purple-700 flex flex-row justify-center"
               href="#"
@@ -322,7 +323,9 @@ return(
                   clipRule="evenodd"
                 />
               </svg>
+              <Link to="/product/2">
               View Details
+              </Link>
             </a>
           </div>
         </div>
@@ -412,7 +415,9 @@ return(
                   clipRule="evenodd"
                 />
               </svg>
+              <Link to="/product/6">
               View Details
+              </Link>
             </a>
           </div>
         </div>
@@ -502,7 +507,9 @@ return(
                   clipRule="evenodd"
                 />
               </svg>
+              <Link to="/product/7">
               View Details
+              </Link>
             </a>
           </div>
         </div>
@@ -591,7 +598,9 @@ return(
                   clipRule="evenodd"
                 />
               </svg>
+              <Link to="/product/8">
               View Details
+              </Link>
             </a>
           </div>
         </div>

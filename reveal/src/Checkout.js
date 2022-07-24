@@ -1,5 +1,5 @@
 import './Checkout.css'
-
+import { Link } from "react-router-dom";
 const CheckOut = () => {
 
 
@@ -60,7 +60,9 @@ return(
         </div>
         <p />
         <button type="submit" className="button">
+            <Link to="/">
           CheckOut
+          </Link>
         </button>
       </form>
     </div>
