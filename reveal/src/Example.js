@@ -1,8 +1,17 @@
 import { Link } from "react-router-dom";
+import video from './video.mp4'
+import { useRef } from "react"
+import './Example.css'
+
 
 
 const Example = ({products, handleAddProduct}) =>{
   // console.log(products)
+  const ref = useRef(null)
+  const handleClick = () => {
+    ref.current?.scrollIntoView({behavior: 'smooth'});
+  };
+
   const productCheck =() => {
     console.log(products)
 
@@ -133,33 +142,40 @@ const Example = ({products, handleAddProduct}) =>{
             
 return(
 <div className="container mx-auto p-5">
+<video loop autoPlay muted id="video">
+        <source
+          src={`${video}`}
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
   <div className="md:flex md:flex-row md:justify-between text-center text-sm sm:text-base">
     <div className="flex flex-row justify-center">
       <div className="bg-gradient-to-r from-purple-800 to-red-400 w-10 h-10 rounded-lg" />
-      <h1 className="text-3xl text-gray-600 ml-2">Reveal</h1>
+      <h1 className="text-3xl text-gray-100 ml-2">Reveal</h1>
     </div>
     <div className="mt-2">
       <a
         href="#"
-        className="text-gray-600 hover:text-purple-600 p-4 px-3 sm:px-4"
+        className="text-gray-100 hover:text-purple-600 p-4 px-3 sm:px-4"
       >
         Home
       </a>
-      <a
-        href="#"
-        className="text-gray-600 hover:text-purple-600 p-4 px-3 sm:px-4"
+      <button
+        onClick={handleClick}
+        className="text-gray-100 hover:text-purple-600 p-4 px-3 sm:px-4"
       >
         Shop
-      </a>
+      </button>
       <a
         href="#"
-        className="text-gray-600 hover:text-purple-600 p-4 px-3 sm:px-4"
+        className="text-gray-100 hover:text-purple-600 p-4 px-3 sm:px-4"
       >
         Blog
       </a>
       <a
         href="#"
-        className="text-gray-600 hover:text-purple-600 p-4 px-3 sm:px-4"
+        className="text-gray-100 hover:text-purple-600 p-4 px-3 sm:px-4"
       >
         Contact
       </a>
@@ -189,30 +205,37 @@ return(
   </div>
   {/* Main Navigation */}
   <div className="md:flex md:flex-row mt-20">
+  
     <div className="md:w-2/5 flex flex-col justify-center items-center">
-      <h2 className="font-serif text-5xl text-gray-600 mb-4 text-center md:self-start md:text-left">
-        Some Catchy Title Here
+      <h2 className="font-serif text-5xl text-gray-100 mb-4 text-center md:self-start md:text-left">
+        In a Mediterranean mood
       </h2>
-      <p className="uppercase text-gray-600 tracking-wide text-center md:self-start md:text-left">
-        Our brand tagline goes here.
+      <p className="uppercase text-gray-100 tracking-wide text-center md:self-start md:text-left">
+       make every outfit count.
       </p>
-      <p className="uppercase text-gray-600 tracking-wide text-center md:self-start md:text-left">
-        Our brand motto goes here.
+      <p className="uppercase text-gray-100 tracking-wide text-center md:self-start md:text-left">
+      Dress like you're already famous.
       </p>
-      <a
-        href="#"
+      <button
+        onClick={handleClick}
+        // href="#"
         className="bg-gradient-to-r from-red-600 to-pink-500 rounded-full py-4 px-8 text-gray-50 uppercase text-xl md:self-start my-5"
       >
         Shop Now
-      </a>
+      </button>
     </div>
+    
     <div className="md:w-3/5">
-      <img src="./images/hero-img.svg" className="w-full" />
+    
+      {/* <img src={`${headphones}`} alt="headphones"className="w-full" /> */}
     </div>
   </div>
+  <div className="space">
+      
+    </div>
   {/* Hero sectioin */}
   <div className="my-20">
-    <div className="flex flex-row justify-between my-5">
+    <div ref={ref} className="flex flex-row justify-between my-5">
       <h2 className="text-3xl">Men's Collection</h2>
       <a href="#" className="flex flex-row text-lg hover:text-purple-700">
           <Link to="/products">
