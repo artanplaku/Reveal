@@ -142,6 +142,7 @@ export default function Cart({products, handleAddProduct}) {
                         </Link>
                       </div>
                       <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
+                        <Link to="/">
                         <p>
                           or{' '}
                           <button
@@ -152,6 +153,7 @@ export default function Cart({products, handleAddProduct}) {
                             Continue Shopping<span aria-hidden="true"> &rarr;</span>
                           </button>
                         </p>
+                        </Link>
                       </div>
                     </div>
                   </div>
