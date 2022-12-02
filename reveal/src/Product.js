@@ -70,7 +70,7 @@ const Product = () => {
         <img
           className="image-zoom__preview js-image-zoom__preview"
           src={product.image}
-          alt="Preview image description"
+          alt="Hemingway is a cute cat name"
         />
         <figcaption className="pu0-sr-only">Image Caption</figcaption>
       </figure>
