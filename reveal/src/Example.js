@@ -3,6 +3,7 @@ import video from "./video.mp4";
 import React, { useRef } from "react";
 import "./Example.css";
 import { useDispatch } from "react-redux";
+import { addToCart } from "./features/cart.jsx";
 
 const Example = ({ products, handleAddProduct }) => {
   // console.log(products)
@@ -13,8 +14,7 @@ const Example = ({ products, handleAddProduct }) => {
   };
 
   const productCheck = () => {
-    console.log(products);
-
+    // console.log(products);
     if (products.length === 0) {
       return null;
     }
@@ -28,7 +28,7 @@ const Example = ({ products, handleAddProduct }) => {
     );
   };
   const productCheck1 = () => {
-    console.log(products);
+    // console.log(products);
 
     if (products.length === 0) {
       return null;
@@ -44,7 +44,7 @@ const Example = ({ products, handleAddProduct }) => {
   };
 
   const productCheck2 = () => {
-    console.log(products);
+    // console.log(products);
 
     if (products.length === 0) {
       return null;
@@ -60,7 +60,7 @@ const Example = ({ products, handleAddProduct }) => {
   };
 
   const productCheck3 = () => {
-    console.log(products);
+    // console.log(products);
 
     if (products.length === 0) {
       return null;
@@ -298,7 +298,10 @@ const Example = ({ products, handleAddProduct }) => {
               </div>
               <div className="flex flex-col xl:flex-row justify-between">
                 <button
-                  onClick={() => handleAddProduct(products)}
+                  // onClick={() => handleAddProduct(products)}
+                  onClick={() => dispatch(addToCart({
+                    price: 20,
+                  }))}
                   className="bg-gradient-to-r from-red-600 to-pink-500 rounded-full py-2 px-4 my-2 text-sm text-white hover:bg-pink-600 hover:from-pink-600 hover:to-pink-600 flex flex-row justify-center"
                 >
                   <svg
