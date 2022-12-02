@@ -142,13 +142,13 @@ const Example = ({products, handleAddProduct}) =>{
             
 return(
 <div className="container mx-auto p-5">
-<video loop autoPlay muted id="video">
+{/* <video loop autoPlay muted id="video">
         <source
           src={`${video}`}
           type="video/mp4"
         />
         Your browser does not support the video tag.
-      </video>
+      </video> */}
   <div className="md:flex md:flex-row md:justify-between text-center text-sm sm:text-base">
     <div className="flex flex-row justify-center">
       <div className="bg-gradient-to-r from-purple-800 to-red-400 w-10 h-10 rounded-lg" />
