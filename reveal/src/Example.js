@@ -300,6 +300,7 @@ const Example = ({ products, handleAddProduct }) => {
                 <button
                   // onClick={() => handleAddProduct(products)}
                   onClick={() => dispatch(addToCart({
+                    name: "Mens T-Shirt",
                     price: 20,
                   }))}
                   className="bg-gradient-to-r from-red-600 to-pink-500 rounded-full py-2 px-4 my-2 text-sm text-white hover:bg-pink-600 hover:from-pink-600 hover:to-pink-600 flex flex-row justify-center"
