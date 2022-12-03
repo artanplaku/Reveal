@@ -432,7 +432,7 @@ const Example = ({ products, handleAddProduct }) => {
             {/* <a href="#">{productCheck2()}</a> */}
             <div className="p-5">
               <h3>
-                <a href="#">Nike Shoes</a>
+                <div href="#">Nike Shoes</div>
               </h3>
               <div className="flex flex-row my-3">
                 <div className="bg-black rounded-full h-5 w-5 shadow-md mr-2" />
@@ -442,40 +442,31 @@ const Example = ({ products, handleAddProduct }) => {
                 <div className="bg-green-700 rounded-full h-5 w-5 shadow-md mr-2" />
               </div>
               <div className="flex flex-row my-3">
-                <a
-                  className="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs"
-                  href="#"
-                >
+                <div className="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs">
                   XL
-                </a>
-                <a
+                </div>
+                <div
                   className="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs"
                   href="#"
                 >
                   XXL
-                </a>
-                <a
-                  className="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs"
-                  href="#"
-                >
+                </div>
+                <div className="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs">
                   L
-                </a>
-                <a
-                  className="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs"
-                  href="#"
-                >
+                </div>
+                <div className="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs">
                   M
-                </a>
-                <a
-                  className="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs"
-                  href="#"
-                >
+                </div>
+                <div className="border-gray-300 border-2 text-gray-400 rounded-md px-2 py-1 mr-2 text-xs">
                   S
-                </a>
+                </div>
               </div>
               <div className="flex flex-col xl:flex-row justify-between">
                 <button
-                  onClick={() => handleAddProduct(products)}
+                  // onClick={() => handleAddProduct(products)}
+                  onClick={() =>
+                    dispatch(addToCart({ name: "Nike Shoes", price: 300 }))
+                  }
                   className="bg-gradient-to-r from-red-600 to-pink-500 rounded-full py-2 px-4 my-2 text-sm text-white hover:bg-pink-600 hover:from-pink-600 hover:to-pink-600 flex flex-row justify-center"
                   href="#"
                 >
