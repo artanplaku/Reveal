@@ -429,7 +429,7 @@ const Example = ({ products, handleAddProduct }) => {
             </div>
           </div>
           <div className="shadow-lg rounded-lg">
-            <a href="#">{productCheck2()}</a>
+            {/* <a href="#">{productCheck2()}</a> */}
             <div className="p-5">
               <h3>
                 <a href="#">Nike Shoes</a>
